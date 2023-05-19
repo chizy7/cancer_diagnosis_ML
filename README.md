@@ -1,42 +1,45 @@
-# Cancer Diagnosis Using Machine Learning
+# Cancer Diagnosis using Machine Learning
 
-This project aims to diagnose cancer using machine learning algorithms.
+This project applies three machine learning algorithms (Random Forest, Naive Bayes, and Decision Trees) to diagnose cancer based on clinical variables. The dataset contains 20 clinical variables and 569 samples, labeled as benign (B) or malignant (M).
 
-## Getting Started
+The project is implemented using Python and PySpark MLlib.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Prerequisites
 
-### Prerequisites
+- Python 3.8 or higher
+- Apache Spark 3.0.0 or higher
+- Pyspark Python library
 
-What things you need to install the software and how to install them
+## Installation
 
-### Installing
+To set up your local environment:
 
-A step by step series of examples that tell you how to get a development environment running
+1. Clone this repository to your local machine.
+    ```bash
+    git clone https://github.com/your_github_username/big_data_project.git
+    ```
+2. Go to the project directory.
+    ```bash
+    cd big_data_project
+    ```
+3. Install the necessary Python libraries specified in `requirements.txt`.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Running the tests
+## Running the Project
 
-Explain how to run the automated tests for this system
+1. To run the project, go to the `src/` directory and run `main.py`:
+    ```bash
+    cd src/
+    python main.py
+    ```
+2. The results (validation error, precision, recall, and F1 score) will be printed out for each model (Random Forest, Decision Tree, Naive Bayes).
 
-## Deployment
+## Notebooks
 
-Add additional notes about how to deploy this on a live system
+- The `notebooks/` directory contains Jupyter notebooks for exploratory data analysis (`exploration.ipynb`) and model training (`model_training.ipynb`). These notebooks provide a more detailed walkthrough of the project.
 
-## Built With
+## Data
 
-* [PySpark](https://spark.apache.org/docs/latest/api/python/) - The data processing framework used
-* [Python](https://www.python.org/) - The programming language used
-
-## Authors
-
-* **Your Name**
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- The `data/` directory should contain the dataset. The dataset is expected to be in LibSVM format.
