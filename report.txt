@@ -1,31 +1,46 @@
 Report: Cancer Diagnosis using Machine Learning with PySpark
 
 Introduction
-This project is aimed at diagnosing cancer using machine learning. Due to its robust handling of big data and extensive machine learning capabilities, PySpark's MLLib was chosen as the platform for this project.
+This project is aimed at diagnosing cancer using machine learning. Due to its robust handling of big data and extensive machine learning capabilities, 
+PySpark's MLLib was chosen as the platform for this project.
 
 Dataset
-My dataset consists of 569 samples. Each sample comes with 20 clinical variables, and the diagnosis of the cancer labeled as 'B' for benign and 'M' for malignant forms the target variable.
+My dataset consists of 569 samples. Each sample comes with 20 clinical variables, and the diagnosis of the cancer labeled as 'B' for benign and 'M' for 
+malignant forms the target variable.
 
 Algorithm Selection
-I have decided on Random Forest, Naive Bayes, and Decision Tree as my choice of machine learning algorithms. Random Forest was selected because of its versatility, ability to work with a diverse set of data types and structures, and resistance to overfitting. Naive Bayes is known for its simplicity, speed, and capability of dealing with high dimensional data, making it a popular choice in medical applications. The Decision Tree algorithm is easily interpretable, handles feature interactions, and is non-parametric, which means it does not make any assumptions about the underlying data distribution.
+I have decided on Random Forest, Naive Bayes, and Decision Tree as my choice of machine learning algorithms. Random Forest was selected because of its 
+versatility, ability to work with a diverse set of data types and structures, and resistance to overfitting. Naive Bayes is known for its simplicity, speed, 
+and capability of dealing with high dimensional data, making it a popular choice in medical applications. The Decision Tree algorithm is easily interpretable, 
+handles feature interactions, and is non-parametric, which means it does not make any assumptions about the underlying data distribution.
 
 Training Procedure
-The first step in my process was to partition the data into training, validation, and test sets, using a 60%, 20%, 20% split respectively. This ensures I have a sufficiently large training dataset, while still maintaining enough data for validation and testing.
+The first step in my process was to partition the data into training, validation, and test sets, using a 60%, 20%, 20% split respectively. This ensures 
+I have a sufficiently large training dataset, while still maintaining enough data for validation and testing.
 
 Grid Search
-For each algorithm, I conducted a grid search to tune the two most important hyperparameters. For Random Forest, these were the number of trees and the maximum depth of the trees. For Naive Bayes, I adjusted the smoothing parameter. For the Decision Tree, I tuned the maximum depth of the tree and the maximum number of bins.
+For each algorithm, I conducted a grid search to tune the two most important hyperparameters. For Random Forest, these were the number of trees and the 
+maximum depth of the trees. For Naive Bayes, I adjusted the smoothing parameter. For the Decision Tree, I tuned the maximum depth of the tree and the maximum 
+number of bins.
 
 Testing Results
-After training, each model was validated against the validation set. The model with the highest F1-score was selected as the best performing model. This model was then tested against the unseen test data set.
-I reported the performance of each model using the F1 score, precision, recall, and ROC curve. Each metric provides unique insights into the model performance. The F1 score is a harmonic mean of precision and recall, whereas the ROC curve provides a comprehensive view of model performance at various threshold settings.
+After training, each model was validated against the validation set. The model with the highest F1-score was selected as the best performing model. 
+This model was then tested against the unseen test data set. I reported the performance of each model using the F1 score, precision, recall, and ROC curve. 
+Each metric provides unique insights into the model performance. The F1 score is a harmonic mean of precision and recall, whereas the ROC curve provides a 
+comprehensive view of model performance at various threshold settings.
 
 Comparison of Three Algorithms
-When comparing the three algorithms, all performed well but Random Forest slightly outperformed the others. As an ensemble method, Random Forest is known to outperform single classifier models like Naive Bayes and Decision Tree. However, the Decision Tree model offered the added benefit of interpretability, providing insights into which features are most important in predicting a diagnosis.
+When comparing the three algorithms, all performed well but Random Forest slightly outperformed the others. As an ensemble method, Random Forest is known 
+to outperform single classifier models like Naive Bayes and Decision Tree. However, the Decision Tree model offered the added benefit of interpretability, 
+providing insights into which features are most important in predicting a diagnosis.
 
 Discussion
-Despite achieving promising results, the project is not without limitations. The size of the dataset is quite small for a big data project, and the models may perform differently when exposed to larger datasets or datasets with different benign and malignant distributions.
-Future improvements could include collecting more data, exploring other potentially relevant features, and applying more sophisticated machine learning algorithms like gradient boosting or deep learning.
+Despite achieving promising results, the project is not without limitations. The size of the dataset is quite small for a big data project, and the models 
+may perform differently when exposed to larger datasets or datasets with different benign and malignant distributions. Future improvements could include 
+collecting more data, exploring other potentially relevant features, and applying more sophisticated machine learning algorithms like gradient boosting or 
+deep learning.
 
 Conclusion
-By following the process of cleaning, transforming, training, validating, and testing, I have successfully developed three machine learning models to diagnose cancer based on clinical variables. The power and efficiency of Spark's MLLib in handling machine learning tasks on big data have been showcased through this project.
+By following the process of cleaning, transforming, training, validating, and testing, I have successfully developed three machine learning models to diagnose 
+cancer based on clinical variables. The power and efficiency of Spark's MLLib in handling machine learning tasks on big data have been showcased through this project.
 
